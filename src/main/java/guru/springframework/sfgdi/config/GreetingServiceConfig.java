@@ -8,7 +8,6 @@ import org.springframework.context.annotation.Profile;
 
 @Configuration
 public class GreetingServiceConfig {
-
     @Bean
     ConstructorGreetingService constructorGreetingService(){
         return new ConstructorGreetingService();
@@ -26,13 +25,11 @@ public class GreetingServiceConfig {
     I18nEnglishGreetingService i18nEnglishGreetingService() {
         return new I18nEnglishGreetingService();
     }
-
     @Profile({"ES", "default"})
     @Bean
     I18nSpanishGreetingService i18nService(){
         return new I18nSpanishGreetingService();
     }
-
     @Primary
     @Bean
     PrimaryGreetingService primaryGreetingService(){
